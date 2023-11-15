@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XkBBHq3Pj4LUQLKeAJTOT9D9HfQbCw7JPN9sDPVhyj4=",
+  "Hash": "GVnK/Z4eGV4kHOSnjQRNS0WcfQ/5vt7IwNqCAkFkPZo=",
   "Source": "MovieStore",
   "BasePath": "_content/MovieStore",
   "Mode": "Default",
@@ -491,6 +491,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\mugilan\\source\\repos\\MovieAdder\\MovieStore\\wwwroot\\Uploads\\4e86d9f0-8ac5-4f82-8f06-f4c6810edde2.jpg",
+      "SourceId": "MovieStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mugilan\\source\\repos\\MovieAdder\\MovieStore\\wwwroot\\",
+      "BasePath": "_content/MovieStore",
+      "RelativePath": "Uploads/4e86d9f0-8ac5-4f82-8f06-f4c6810edde2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\4e86d9f0-8ac5-4f82-8f06-f4c6810edde2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\mugilan\\source\\repos\\MovieAdder\\MovieStore\\wwwroot\\Uploads\\d2985671-0131-43a7-8879-c320a84920c4.jpg",
+      "SourceId": "MovieStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mugilan\\source\\repos\\MovieAdder\\MovieStore\\wwwroot\\",
+      "BasePath": "_content/MovieStore",
+      "RelativePath": "Uploads/d2985671-0131-43a7-8879-c320a84920c4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\d2985671-0131-43a7-8879-c320a84920c4.jpg"
     }
   ]
 }

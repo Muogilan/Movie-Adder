@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\MovieStore.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\mugilan\\source\\repos\\MovieAdder\\MovieStore\\wwwroot\\Uploads\\4e86d9f0-8ac5-4f82-8f06-f4c6810edde2.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\4e86d9f0-8ac5-4f82-8f06-f4c6810edde2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mugilan\\source\\repos\\MovieAdder\\MovieStore\\wwwroot\\Uploads\\d2985671-0131-43a7-8879-c320a84920c4.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\d2985671-0131-43a7-8879-c320a84920c4.jpg"
+    },
+    {
       "Id": "C:\\Users\\mugilan\\source\\repos\\MovieAdder\\MovieStore\\wwwroot\\css\\forms.css",
       "PackagePath": "staticwebassets\\css\\forms.css"
     },

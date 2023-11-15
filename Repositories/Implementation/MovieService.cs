@@ -1,4 +1,5 @@
 ﻿using MovieStore.Models.Domain;
+using MovieStore.Models.DTO;
 using MovieStore.Repositories.Abstract;
 
 namespace MovieStore.Repositories.Implementation
@@ -14,7 +15,18 @@ namespace MovieStore.Repositories.Implementation
         {
             try
             {
+
                 ctx.Movie.Add(model);
+                ctx.SaveChanges();
+                foreach (int genreId in model.Genre)
+                {
+                    var movieGenre = new MovieGenre
+                    {
+                        MovieId = model.Id,
+                        GenreId = genreId
+                    };
+                    ctx.MovieGenre.Add(movieGenre);
+                }
                 ctx.SaveChanges();
                 return true;
             }
@@ -46,9 +58,13 @@ namespace MovieStore.Repositories.Implementation
             return ctx.Movie.Find(id);
         }
 
-        public IQueryable<Movie> List()
+        public MovieListVm List()
         {
-            var data = ctx.Movie.AsQueryable();
+            var List = ctx.Movie.AsQueryable();
+            var data = new MovieListVm
+            {
+                MovieList = List
+            };
             return data;
         }
 

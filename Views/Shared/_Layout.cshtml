@@ -1,5 +1,6 @@
 ﻿@{
     string username = User.Identity.Name;
+    bool isAdmin = User.IsInRole("Admin"); 
 }
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="/images/movie_filter_FILL0_wght400_GRAD0_opsz48.svg">  
+    <link rel="icon" href="/images/movie_filter_FILL0_wght400_GRAD0_opsz48.svg">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -26,35 +27,26 @@
         <ul class="nav-link">
             <li><a class="active" href="/Home/Index">Home</a></li>
             <li><a href="/Home/About">About</a></li>
-            @if (User.IsInRole("Admin"))
-            {
-                <li>
-                    <a href="#">Admin <i class="fa fa-caret-down"></i></a>
-
-                    <ul class="dropdown-nav-link">
-                        <li><a href="/Genre/Add">Genre</a></li>
-                        <li><a href="/Movie/Add">Movie</a></li>
-                        <li><a href="/UserAuthentication/Logout">Logout</a></li>
-                    </ul>
-                </li>
-            }
-@*             @if (User.IsInRole("User"))
-            {
-                <li>
-                    <a href="#">User <i class="fa fa-caret-down"></i></a>
-
-                    <ul class="dropdown-nav-link">
-                        <li><a href="/UserAuthentication/Logout">Logout</a></li>
-                    </ul>
-                </li>
-            } *@
 
             @if (!string.IsNullOrEmpty(username))
             {
-                <li><a href="/UserAuthentication/Login">Login</a></li>
+                <li>
+                    <a href="#">Welcome, @username! <i class="fa fa-caret-down"></i></a>
 
+                    <ul class="dropdown-nav-link">
+                        @if (isAdmin)
+                        {
+                            <li><a href="/Genre/Add">Add Genre</a></li>
+                            <li><a href="/Movie/Add">Add Movie</a></li>
+                        }
+                        <li><a href="/UserAuthentication/Logout">Logout</a></li>
+                    </ul>
+                </li>
             }
-
+            else
+            {
+                <li><a href="/UserAuthentication/Login">Login</a></li>
+            }
         </ul>
     </nav>
     <div class="container">

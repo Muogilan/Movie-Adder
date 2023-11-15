@@ -36,7 +36,7 @@ namespace MovieStore.Repositories.Implementation
                 var stream = new FileStream(fileWithPath, FileMode.Create);
                 imageFile.CopyTo(stream);
                 stream.Close();
-                return new Tuple<int, string>(1, newFileName);
+                return new Tuple<int, string>(1, newFileName); 
             }
             catch (Exception ex)
             {

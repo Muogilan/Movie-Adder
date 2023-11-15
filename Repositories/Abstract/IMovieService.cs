@@ -1,4 +1,5 @@
 ﻿using MovieStore.Models.Domain;
+using MovieStore.Models.DTO;
 
 namespace MovieStore.Repositories.Abstract
 {
@@ -9,7 +10,7 @@ namespace MovieStore.Repositories.Abstract
             bool Update(Movie model);
             Movie GetById(int id);
             bool Delete(int id);
-            IQueryable<Movie> List();
+            MovieListVm List();
 
         }
 }

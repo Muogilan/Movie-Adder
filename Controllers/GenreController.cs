@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MovieStore.Models.Domain;
 using MovieStore.Repositories.Abstract;
 
-namespace MovieStoreMvc.Controllers
+namespace MovieStore.Controllers
 {
     [Authorize]
     public class GenreController : Controller
@@ -55,7 +55,7 @@ namespace MovieStoreMvc.Controllers
             }
             else
             {
-                TempData["msg"] = "Error on server side";
+                TempData["msg"] = "Error on server side";   
                 return View(model);
             }
         }
