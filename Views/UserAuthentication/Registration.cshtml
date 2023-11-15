@@ -1,0 +1,59 @@
+﻿@model MovieStore.Models.DTO.Registration
+@{
+    Layout ="_Layout";
+}
+
+<form class="w-40" asp-action="Registration" method="post">
+    <h2 class="pb-10">Registration</h2>
+    <div class="input-container">
+        <label asp-for="Name" class="w-40">Name</label>
+        <input type="text" class="input" asp-for="Name">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="Name"></span>
+    </div>
+
+
+    <div class="input-container">
+        <label asp-for="Email" class="w-40">Email</label>
+        <input type="Email" class="input" asp-for="Email">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="Email"></span>
+    </div>
+
+    <div class="input-container">
+        <label asp-for="UserName" class="w-40">UserName</label>
+        <input type="UserName" class="input" asp-for="UserName">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="UserName"></span>
+    </div>
+
+    <div class="input-container">    
+        <label asp-for="Password" class="w-40">Password</label>    
+        <input type="password" class="input" asp-for="Password">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="Password"></span>
+    </div>
+
+    <div class="input-container">
+        <label asp-for="PasswordConfirm" class="w-40">PasswordConfirm</label>
+        <input type="PasswordConfirm" class="input" asp-for="PasswordConfirm">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="PasswordConfirm"></span>   
+    </div>
+    @if (TempData["msg"] != null) 
+    {
+        <div class="input-container">
+            @TempData["msg"]
+        </div>
+    }
+    <div class="input-container">
+        <button class="btn btn-default" type="submit">Sign Up</button>
+        <a class="btn btn-sec" href="/UserAuthentication/Login">Login</a>
+    </div>
+
+</form>
